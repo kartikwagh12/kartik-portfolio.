@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080d12">
+  <meta name="description" content="Kartik Wagh — Computer Engineering student exploring web development, programming and AI.">
+  <meta property="og:title" content="Kartik Wagh | Developer Portfolio">
+  <meta property="og:description" content="A student developer's learning journey, experiments and projects.">
+  <title>Kartik Wagh | Developer Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="particleCanvas" aria-hidden="true"></canvas>
+  <div class="ambient ambient-a"></div><div class="ambient ambient-b"></div>
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <header class="header" id="top">
+    <a class="brand" href="#home" aria-label="Kartik home"><span class="brand-symbol">K<span>.</span></span><span class="brand-name">KARTIK<span>WAGH</span></span></a>
+    <button class="menu-button" id="menuButton" aria-label="Open navigation" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+    <nav class="navigation" id="navigation">
+      <a href="#about">About</a><a href="#education">Education</a><a href="#skills">Skills</a>
+      <a href="#projects">Projects</a><a href="#journey">Journey</a><a class="nav-cta" href="#contact">Contact <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+    </nav>
+    <div class="header-tools">
+      <button class="tool-button" id="themeButton" aria-label="Change color theme" title="Change theme"><i class="fa-solid fa-palette"></i></button>
+      <button class="tool-button" id="soundButton" aria-label="Toggle interface sounds" title="Toggle sound"><i class="fa-solid fa-volume-xmark"></i></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero section-wrap" id="home">
+      <div class="hero-content">
+        <div class="availability"><span class="pulse-dot"></span> COMPUTER ENGINEERING STUDENT <span class="availability-line"></span> INDIA</div>
+        <p class="hero-kicker">HELLO, WORLD! I'M</p>
+        <h1>Kartik <span class="outline-name">Wagh</span><span class="hero-period">.</span></h1>
+        <div class="role-line"><span class="code-bracket">&lt;</span><span id="typedRole">Student Developer</span><span class="type-cursor">_</span><span class="code-bracket">/&gt;</span></div>
+        <p class="hero-description">I’m learning to turn curiosity into code — exploring web development, programming and creative technology one project at a time.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#projects">Explore projects <i class="fa-solid fa-arrow-down"></i></a>
+          <a class="button button-outline" href="#about">Get to know me</a>
+        </div>
+        <div class="hero-footnote"><span><i class="fa-solid fa-location-dot"></i> Silvassa, India</span><span class="foot-separator"></span><span><i class="fa-solid fa-code"></i> Always learning</span></div>
+      </div>
+      <div class="hero-visual">
+        <div class="visual-orbit orbit-one"></div><div class="visual-orbit orbit-two"></div>
+        <div class="visual-card">
+          <div class="visual-card-top"><span class="window-dots"><i></i><i></i><i></i></span><span>kartik.dev / intro</span><span class="live-mark">LIVE</span></div>
+          <div class="code-window">
+            <p><span class="line-no">01</span><span class="syntax-purple">const</span> developer = {</p>
+            <p><span class="line-no">02</span>&nbsp; name: <span class="syntax-green">'Kartik Wagh'</span>,</p>
+            <p><span class="line-no">03</span>&nbsp; field: <span class="syntax-green">'Computer Engineering'</span>,</p>
+            <p><span class="line-no">04</span>&nbsp; interests: [</p>
+            <p><span class="line-no">05</span>&nbsp;&nbsp; <span class="syntax-green">'Web Development'</span>,</p>
+            <p><span class="line-no">06</span>&nbsp;&nbsp; <span class="syntax-green">'Programming'</span>,</p>
+            <p><span class="line-no">07</span>&nbsp;&nbsp; <span class="syntax-green">'Artificial Intelligence'</span></p>
+            <p><span class="line-no">08</span>&nbsp; ],</p>
+            <p><span class="line-no">09</span>&nbsp; mindset: <span class="syntax-blue">'Keep building'</span></p>
+            <p><span class="line-no">10</span>};</p>
+            <p class="code-comment"><span class="line-no">11</span>// learning by doing ✦</p>
+          </div>
+          <div class="visual-card-bottom"><span><i class="fa-solid fa-circle-check"></i> Curious by nature</span><span>v1.0.26</span></div>
+        </div>
+        <div class="floating-chip chip-html"><i class="fa-brands fa-html5"></i> HTML</div>
+        <div class="floating-chip chip-js"><i class="fa-brands fa-js"></i> JS</div>
+        <div class="floating-chip chip-python"><i class="fa-brands fa-python"></i> Python</div>
+      </div>
+      <a class="scroll-cue" href="#about"><span>SCROLL TO EXPLORE</span><i class="fa-solid fa-arrow-down-long"></i></a>
+    </section>
+
+    <section class="section-wrap section-block" id="about">
+      <div class="section-heading reveal"><p class="section-index">01 / ABOUT</p><h2>Curious mind.<br><span>Builder’s mindset.</span></h2><p class="section-intro">A little about the person behind the code.</p></div>
+      <div class="about-grid">
+        <article class="about-copy panel reveal">
+          <div class="panel-label"><span class="tiny-square"></span> WHO I AM</div>
+          <p class="about-lead">I’m <strong>Kartik Wagh</strong>, a Diploma Computer Engineering student at Government Polytechnic.</p>
+          <p>I’m at the beginning of my technology journey. I enjoy understanding how things work, experimenting with code and gradually turning ideas into useful digital experiences.</p>
+          <p>Right now, I’m strengthening my foundations in programming and web development while exploring how AI can make technology more helpful.</p>
+          <div class="about-signature">Stay curious. Keep creating.<span>✦</span></div>
+        </article>
+        <div class="about-side">
+          <article class="mini-panel reveal"><div class="mini-icon"><i class="fa-solid fa-compass"></i></div><div><h3>My direction</h3><p>Build strong fundamentals and grow into a thoughtful software developer.</p></div></article>
+          <article class="mini-panel reveal"><div class="mini-icon"><i class="fa-solid fa-lightbulb"></i></div><div><h3>My approach</h3><p>Learn by building, test ideas, ask questions and improve step by step.</p></div></article>
+          <article class="mini-panel reveal"><div class="mini-icon"><i class="fa-solid fa-laptop-code"></i></div><div><h3>What excites me</h3><p>Web experiences, creative coding, AI experiments and problem solving.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-wrap section-block" id="education">
+      <div class="section-heading reveal"><p class="section-index">02 / EDUCATION</p><h2>Learning is a <span>journey.</span></h2><p class="section-intro">The foundation I’m building for what comes next.</p></div>
+      <div class="timeline education-timeline">
+        <div class="timeline-item reveal"><span class="timeline-dot"></span><div class="timeline-date">2026 — PRESENT</div><div class="timeline-card panel"><div class="timeline-top"><div><h3>Diploma in Computer Engineering</h3><p class="timeline-place">Government Polytechnic</p></div><span class="timeline-tag">CURRENT</span></div><p>Learning core concepts of computing, programming, electronics, mathematics and communication as part of my diploma studies.</p><div class="tag-row"><span>Computer Fundamentals</span><span>Programming</span><span>Problem Solving</span></div></div></div>
+        <div class="timeline-item reveal"><span class="timeline-dot"></span><div class="timeline-date">COMPLETED</div><div class="timeline-card panel"><div class="timeline-top"><div><h3>Secondary Education</h3><p class="timeline-place">School education</p></div><span class="timeline-tag muted-tag">FOUNDATION</span></div><p>Completed secondary education and began exploring technology and computers more deeply.</p></div></div>
+      </div>
+    </section>
+
+    <section class="section-wrap section-block" id="skills">
+      <div class="section-heading reveal"><p class="section-index">03 / SKILLS & TOOLS</p><h2>Tools I’m <span>learning.</span></h2><p class="section-intro">My current learning stack — growing with every experiment.</p></div>
+      <div class="skills-grid">
+        <article class="skill-card panel reveal"><div class="skill-icon html-icon"><i class="fa-brands fa-html5"></i></div><div class="skill-info"><h3>HTML</h3><p>Page structure & semantic markup</p><span class="skill-level">LEARNING</span></div><div class="skill-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></div></article>
+        <article class="skill-card panel reveal"><div class="skill-icon css-icon"><i class="fa-brands fa-css3-alt"></i></div><div class="skill-info"><h3>CSS</h3><p>Layouts, styling & responsive design</p><span class="skill-level">LEARNING</span></div><div class="skill-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></div></article>
+        <article class="skill-card panel reveal"><div class="skill-icon js-icon"><i class="fa-brands fa-js"></i></div><div class="skill-info"><h3>JavaScript</h3><p>Interactivity & programming basics</p><span class="skill-level">LEARNING</span></div><div class="skill-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></div></article>
+        <article class="skill-card panel reveal"><div class="skill-icon python-icon"><i class="fa-brands fa-python"></i></div><div class="skill-info"><h3>Python</h3><p>Logic, scripts & experiments</p><span class="skill-level">LEARNING</span></div><div class="skill-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></div></article>
+        <article class="skill-card panel reveal"><div class="skill-icon cpp-icon"><i class="fa-solid fa-code"></i></div><div class="skill-info"><h3>C / C++</h3><p>Programming fundamentals</p><span class="skill-level">LEARNING</span></div><div class="skill-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></div></article>
+        <article class="skill-card panel reveal"><div class="skill-icon tools-icon"><i class="fa-brands fa-github"></i></div><div class="skill-info"><h3>Git & GitHub</h3><p>Version control & project hosting</p><span class="skill-level">EXPLORING</span></div><div class="skill-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></div></article>
+      </div>
+      <div class="tools-strip reveal"><span>ALSO EXPLORING</span><b>VS Code</b><i></i><b>Termux</b><i></i><b>GitHub Pages</b><i></i><b>AI Tools</b></div>
+    </section>
+
+    <section class="section-wrap section-block" id="projects">
+      <div class="section-heading reveal"><p class="section-index">04 / SELECTED WORK</p><h2>Experiments & <span>projects.</span></h2><p class="section-intro">A collection of things I’m building and learning from.</p></div>
+      <div class="projects-grid">
+        <article class="project-card panel reveal"><div class="project-visual car-visual"><div class="project-visual-top"><span>PROJECT_01</span><i class="fa-solid fa-arrow-up-right-from-square"></i></div><div class="car-art"><i class="fa-solid fa-car-side"></i><span>CAR WORLD</span></div><div class="visual-grid-lines"></div></div><div class="project-body"><div class="project-type">WEB DEVELOPMENT <span>01</span></div><h3>Car World</h3><p>A car-focused website concept exploring vehicle showcases, clean layouts and structured information.</p><div class="project-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div><span class="project-status"><i class="fa-solid fa-circle"></i> Personal project</span></div></article>
+        <article class="project-card panel reveal"><div class="project-visual hand-visual"><div class="project-visual-top"><span>PROJECT_02</span><i class="fa-solid fa-arrow-up-right-from-square"></i></div><div class="hand-art"><i class="fa-solid fa-hand"></i><span>GESTURE CONTROL</span></div><div class="hand-rings"></div></div><div class="project-body"><div class="project-type">CREATIVE TECHNOLOGY <span>02</span></div><h3>Hand Tracking Lab</h3><p>An experimental concept exploring camera-based hand tracking and gesture interaction in the browser.</p><div class="project-tags"><span>JavaScript</span><span>MediaPipe</span><span>Three.js</span></div><span class="project-status"><i class="fa-solid fa-circle"></i> Experiment</span></div></article>
+        <article class="project-card panel reveal"><div class="project-visual ai-visual"><div class="project-visual-top"><span>PROJECT_03</span><i class="fa-solid fa-arrow-up-right-from-square"></i></div><div class="ai-art"><i class="fa-solid fa-brain"></i><span>PERSONAL AI AGENT</span></div><div class="ai-pulse"></div></div><div class="project-body"><div class="project-type">AI & AUTOMATION <span>03</span></div><h3>Personal AI Agent</h3><p>A learning project exploring a local assistant with typed and voice-based commands.</p><div class="project-tags"><span>Python</span><span>Flask</span><span>Ollama</span></div><span class="project-status"><i class="fa-solid fa-circle"></i> In development</span></div></article>
+      </div>
+      <p class="project-note"><i class="fa-solid fa-circle-info"></i> Project descriptions reflect learning concepts and current progress. Live demos will be linked when they’re ready to share.</p>
+    </section>
+
+    <section class="section-wrap section-block" id="journey">
+      <div class="section-heading reveal"><p class="section-index">05 / BEYOND THE SCREEN</p><h2>Curiosity drives <span>me.</span></h2><p class="section-intro">The areas I enjoy exploring outside regular coursework.</p></div>
+      <div class="interest-grid">
+        <div class="interest-card reveal"><i class="fa-solid fa-wand-magic-sparkles"></i><h3>Creative Technology</h3><p>Finding interesting ways to combine code and interaction.</p></div>
+        <div class="interest-card reveal"><i class="fa-solid fa-robot"></i><h3>Artificial Intelligence</h3><p>Exploring how AI tools and systems work.</p></div>
+        <div class="interest-card reveal"><i class="fa-solid fa-shield-halved"></i><h3>Cybersecurity</h3><p>Learning about safer systems and digital awareness.</p></div>
+        <div class="interest-card reveal"><i class="fa-solid fa-puzzle-piece"></i><h3>Problem Solving</h3><p>Breaking challenges into smaller, understandable steps.</p></div>
+      </div>
+      <div class="journey-banner reveal"><div><p class="section-index">CURRENT FOCUS</p><h3>Strong fundamentals.<br><span>Real projects. Consistent growth.</span></h3></div><div class="focus-symbol"><i class="fa-solid fa-terminal"></i></div></div>
+    </section>
+
+    <section class="section-wrap section-block contact-section" id="contact">
+      <div class="section-heading reveal"><p class="section-index">06 / GET IN TOUCH</p><h2>Have an idea?<br><span>Let’s connect.</span></h2><p class="section-intro">I’m open to learning, collaboration and thoughtful conversations about technology.</p></div>
+      <div class="contact-grid">
+        <div class="contact-info panel reveal"><div class="panel-label"><span class="tiny-square"></span> FIND ME ONLINE</div><a class="contact-link" href="https://github.com/kartikwagh12" target="_blank" rel="noopener"><span class="contact-icon"><i class="fa-brands fa-github"></i></span><span><small>GITHUB</small><b>github.com/kartikwagh12</b></span><i class="fa-solid fa-arrow-up-right-from-square link-arrow"></i></a><div class="contact-link contact-location"><span class="contact-icon"><i class="fa-solid fa-location-dot"></i></span><span><small>LOCATION</small><b>Silvassa, India</b></span></div><div class="contact-bottom-note">Best way to reach me: send a message through GitHub.</div></div>
+        <form class="message-form panel reveal" id="feedbackForm"><div class="panel-label"><span class="tiny-square"></span> LEAVE A MESSAGE</div><label for="visitorName">Your name</label><input id="visitorName" name="name" type="text" placeholder="Enter your name" maxlength="60" required><label for="visitorMessage">Your message</label><textarea id="visitorMessage" name="message" rows="4" placeholder="Write a short message..." maxlength="500" required></textarea><button class="button button-primary form-submit" type="submit">Prepare message <i class="fa-solid fa-arrow-right"></i></button><p class="form-note" id="formNote">This opens your device’s email app. Nothing is stored on this website.</p></form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer"><a class="brand footer-brand" href="#top"><span class="brand-symbol">K<span>.</span></span><span class="brand-name">KARTIK<span>WAGH</span></span></a><p>Designed & built while learning. <span>© <span id="currentYear">2026</span> Kartik Wagh</span></p><a class="back-top" href="#top">BACK TO TOP <i class="fa-solid fa-arrow-up"></i></a></footer>
+
+  <div class="modal-backdrop" id="resumeModal" aria-hidden="true"><div class="modal-card"><button class="modal-close" id="closeModal" aria-label="Close"><i class="fa-solid fa-xmark"></i></button><div class="modal-icon"><i class="fa-regular fa-file-lines"></i></div><p class="section-index">RESUME</p><h2>Resume coming soon.</h2><p>I’m preparing a verified resume. Check back later for the downloadable version.</p><button class="button button-primary" id="modalOkay">Got it</button></div></div>
+  <button class="back-to-top-floating" id="backToTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+  <script src="script.js"></script>
+</body>
+</html>
